@@ -1,449 +1,178 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth bg-white">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K. Manikanta - Front-End Developer & UI/UX Designer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K. Manikanta – Front-End Developer & UI/UX Designer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange-main: #fd7e14;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    /* for section scroll nav highlight, use JS if wanted */
+  </style>
 </head>
-<body class="antialiased">
+<body class="bg-white text-gray-900">
 
-    <!-- Header -->
-    <header id="header" class="glass-effect fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">KM</a>
-            <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="text-slate-300 hover:text-sky-400 transition duration-300">Home</a>
-                <a href="#about" class="text-slate-300 hover:text-sky-400 transition duration-300">About</a>
-                <a href="#skills" class="text-slate-300 hover:text-sky-400 transition duration-300">Skills</a>
-                <a href="#projects" class="text-slate-300 hover:text-sky-400 transition duration-300">Projects</a>
-                <a href="#experience" class="text-slate-300 hover:text-sky-400 transition duration-300">Experience</a>
-                <a href="#contact" class="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Contact</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-slate-300 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+  <!-- Navbar -->
+  <header class="fixed w-full top-0 left-0 bg-white/80 border-b border-orange-100 z-50 shadow-md">
+    <nav class="flex justify-between items-center max-w-6xl mx-auto px-4 py-3">
+      <div class="font-extrabold text-2xl text-[var(--orange-main)] tracking-tight">KM</div>
+      <div class="hidden md:flex items-center space-x-8 font-semibold">
+        <a href="#home" class="hover:text-[var(--orange-main)] transition">Home</a>
+        <a href="#about" class="hover:text-[var(--orange-main)] transition">About</a>
+        <a href="#skills" class="hover:text-[var(--orange-main)] transition">Skills</a>
+        <a href="#projects" class="hover:text-[var(--orange-main)] transition">Projects</a>
+        <a href="#experience" class="hover:text-[var(--orange-main)] transition">Experience</a>
+        <a href="#contact" class="bg-[var(--orange-main)] text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-3xl text-[var(--orange-main)] focus:outline-none">
+        &#9776;
+      </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden flex flex-col bg-white/95 border-t border-orange-100">
+      <a href="#home" class="py-3 px-4 border-b border-orange-50 hover:bg-orange-100 hover:text-[var(--orange-main)]">Home</a>
+      <a href="#about" class="py-3 px-4 border-b border-orange-50 hover:bg-orange-100 hover:text-[var(--orange-main)]">About</a>
+      <a href="#skills" class="py-3 px-4 border-b border-orange-50 hover:bg-orange-100 hover:text-[var(--orange-main)]">Skills</a>
+      <a href="#projects" class="py-3 px-4 border-b border-orange-50 hover:bg-orange-100 hover:text-[var(--orange-main)]">Projects</a>
+      <a href="#experience" class="py-3 px-4 border-b border-orange-50 hover:bg-orange-100 hover:text-[var(--orange-main)]">Experience</a>
+      <a href="#contact" class="py-3 px-4 font-bold hover:bg-orange-100 hover:text-[var(--orange-main)]">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-24 md:pt-32 max-w-6xl mx-auto px-4">
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-gray-900">K. Manikanta</h1>
+      <h2 class="text-xl md:text-3xl font-bold mb-6 text-[var(--orange-main)]">Front-End Developer &amp; UI/UX Designer</h2>
+      <p class="max-w-2xl text-lg md:text-xl text-gray-700 mb-10">
+        Creative and detail-oriented developer passionate about building responsive, user-centric web applications and transforming design concepts into high-quality digital solutions.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+        <a href="#projects" class="bg-[var(--orange-main)] text-white font-bold px-8 py-3 rounded-lg shadow hover:brightness-110 hover:scale-105 transform transition">View My Work</a>
+        <a href="mailto:manikantakambala12@gmail.com" class="bg-white border border-[var(--orange-main)] text-[var(--orange-main)] font-bold px-8 py-3 rounded-lg shadow hover:bg-[var(--orange-main)] hover:text-white transition">Get in Touch</a>
+      </div>
+      <div class="flex justify-center gap-6">
+        <a href="https://www.linkedin.com/in/manikanta-kambala/" aria-label="LinkedIn" target="_blank" class="text-gray-400 hover:text-[var(--orange-main)] text-3xl transition"><i class="fab fa-linkedin"></i></a>
+        <!-- Add more socials as needed -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6">About Me</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+        <img src="https://placehold.co/250x250/fd7e14/fff?text=KM" alt="K. Manikanta"
+             class="rounded-full shadow-lg border-4 border-[var(--orange-main)] w-32 h-32 md:w-48 md:h-48 object-cover mb-4 md:mb-0">
+        <div class="flex-1 text-lg text-gray-700">
+          <p class="mb-3">I am a creative Front-End Developer with React.js skills and a strong eye for design, specializing in building modern, high-performance interfaces.</p>
+          <p class="mb-3">Experienced in HTML5, CSS3, JavaScript (ES6+), Bootstrap, and Tailwind CSS, and comfortable with Figma and UI prototyping tools.</p>
+          <p>Based in Andhra Pradesh, India. Fluent in English and Telugu. Always exploring new tech and design trends.</p>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-            <a href="#home" class="block py-2 text-slate-300 hover:text-sky-400">Home</a>
-            <a href="#about" class="block py-2 text-slate-300 hover:text-sky-400">About</a>
-            <a href="#skills" class="block py-2 text-slate-300 hover:text-sky-400">Skills</a>
-            <a href="#projects" class="block py-2 text-slate-300 hover:text-sky-400">Projects</a>
-            <a href="#experience" class="block py-2 text-slate-300 hover:text-sky-400">Experience</a>
-            <a href="#contact" class="block mt-2 bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg text-center">Contact</a>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">Technical Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Skill Card -->
+        <div class="bg-white border border-orange-100 rounded-lg shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6">
+          <h3 class="font-bold text-xl mb-3 text-gray-900">Front-End Development</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>React.js</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>HTML5 &amp; CSS3</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>JavaScript (ES6+)</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Bootstrap</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Tailwind CSS</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>React Router &amp; Hooks</li>
+          </ul>
         </div>
-    </header>
-
-    <main class="container mx-auto px-6">
-        <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center pt-24 relative overflow-hidden">
-            <canvas id="bg-canvas"></canvas>
-            <div class="hero-content">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-                    K. Manikanta
-                </h1>
-                <h2 class="text-2xl md:text-4xl font-bold gradient-text mb-6">
-                    Front-End Developer & UI/UX Designer
-                </h2>
-                <p class="max-w-3xl text-slate-400 text-lg md:text-xl mb-8">
-                    Creative and detail-oriented developer passionate about building responsive, user-centric web applications and transforming design concepts into high-quality digital solutions.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#projects" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">View My Work</a>
-                    <a href="mailto:manikantakambala12@gmail.com" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">Get in Touch</a>
-                </div>
-                 <div class="flex space-x-6 mt-12 justify-center">
-                    <a href="https://www.linkedin.com/in/manikanta-kambala/" aria-label="LinkedIn" class="text-slate-400 hover:text-sky-400 transition duration-300">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
-                    </a>
-                     <a href="https://www.linkedin.com/in/manikanta-kambala/" aria-label="Behance" class="text-slate-400 hover:text-sky-400 transition duration-300">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6h-6v-2h6v2zm-13.528.243c.995 0 2.231-.418 2.231-1.637 0-.96-.803-1.606-1.995-1.606-1.157 0-2.028.631-2.028 1.583 0 1.156.989 1.66 1.792 1.66zm-1.889 11.757h3.818v-7.234h-3.818v7.234zm15.417-5.823c-1.396-1.464-3.417-2.09-5.323-2.09-4.995 0-7.306 3.039-7.306 6.822 0 3.755 2.528 6.098 6.013 6.098 2.604 0 4.167-1.184 5.383-3.021h.11v2.58h3.334v-8.228c-.015-.015-2.078-2.16-2.211-2.16zm-5.106 7.823c-2.11 0-3.417-1.34-3.417-3.463 0-2.155 1.417-3.552 3.517-3.552 1.942 0 3.111 1.258 3.111 3.521 0 2.204-1.285 3.494-3.211 3.494zm-12.289-13.842h-3.611v-2h3.611v2z"/></svg>
-                     </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Me -->
-        <section id="about" class="py-24">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">About Me</h2>
-                <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
-            </div>
-            <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10">
-                <div class="w-full md:w-1/2 p-4">
-                    <img src="https://placehold.co/600x600/1e293b/e2e8f0?text=KM" alt="K. Manikanta" class="rounded-full shadow-lg border-4 border-gray-700">
-                </div>
-                <div class="w-full md:w-1/2 text-lg text-slate-300">
-                    <p class="mb-4">
-                        I am a creative and detail-oriented Front-End Developer specializing in React.js, with a strong foundation in HTML5, CSS3, Bootstrap, and JavaScript. My expertise extends to UI/UX design, utilizing tools like Figma and Miro to craft intuitive and engaging user experiences.
-                    </p>
-                    <p class="mb-4">
-                        I am passionate about translating design concepts into high-quality, responsive web applications. I am seeking to join an innovative team where I can contribute to cutting-edge projects and help deliver impactful front-end experiences that delight users.
-                    </p>
-                    <p>
-                        Based in Andhra Pradesh, India, I'm fluent in both English and Telugu. When I'm not coding, I enjoy exploring new technologies and design trends.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Skills -->
-        <section id="skills" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Technical Skills</h2>
-                <p class="text-slate-400 mt-2">A snapshot of my development and design toolkit.</p>
-                <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Front-End Development -->
-                <div class="skill-card bg-gray-900 p-8 rounded-lg shadow-lg transition duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-4">Front-End Development</h3>
-                    <ul class="space-y-3 text-slate-300">
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>React.js</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>HTML5 & CSS3</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>JavaScript (ES6+)</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Bootstrap</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Tailwind CSS</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>React Router & Hooks</li>
-                    </ul>
-                </div>
-
-                <!-- UI/UX Design -->
-                <div class="skill-card bg-gray-900 p-8 rounded-lg shadow-lg transition duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-4">UI/UX Design</h3>
-                    <ul class="space-y-3 text-slate-300">
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Figma</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Miro</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Wireframing & Prototyping</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>User Research</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Usability Testing</li>
-                    </ul>
-                </div>
-
-                <!-- Tools & Methodologies -->
-                <div class="skill-card bg-gray-900 p-8 rounded-lg shadow-lg transition duration-300">
-                    <h3 class="text-2xl font-bold text-white mb-4">Tools & Methods</h3>
-                    <ul class="space-y-3 text-slate-300">
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Git & Version Control</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>VS Code</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Responsive Design</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Agile Methodologies</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-sky-400 rounded-full mr-3"></span>Cross-Browser Compatibility</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">My Work & Design Process</h2>
-                <p class="text-slate-400 mt-2">A selection of my development projects and UI/UX designs.</p>
-                <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
-            </div>
-            
-            <h3 class="text-2xl font-semibold text-white mb-8">Development Projects</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <!-- Vijetha Packers and Movers -->
-                <div class="project-card bg-gray-900 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
-                    <h4 class="text-xl font-bold text-white mb-2">Vijetha Packers and Movers</h4>
-                    <p class="text-slate-400 mb-4 flex-grow">Developed a responsive website optimized for mobile and desktop, with modular components and inquiry forms.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">React.js</span>
-                        <span class="bg-purple-900 text-purple-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Bootstrap</span>
-                        <span class="bg-orange-900 text-orange-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML5</span>
-                    </div>
-                    <a href="http://vijethapackersandmovers.in" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium mt-auto">View Project &rarr;</a>
-                </div>
-
-                <!-- GL Sports Centrum -->
-                <div class="project-card bg-gray-900 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
-                    <h4 class="text-xl font-bold text-white mb-2">GL Sports Centrum</h4>
-                    <p class="text-slate-400 mb-4 flex-grow">Coded interactive booking sections and responsive layouts with dynamic navigation and real-time features.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">React.js</span>
-                        <span class="bg-teal-900 text-teal-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
-                    </div>
-                    <a href="http://glsportscentrum.com" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium mt-auto">View Project &rarr;</a>
-                </div>
-
-                <!-- Anish Dental -->
-                <div class="project-card bg-gray-900 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col">
-                    <h4 class="text-xl font-bold text-white mb-2">Anish Dental</h4>
-                    <p class="text-slate-400 mb-4 flex-grow">Developed a patient-focused website, ensuring pixel-perfect alignment with Figma designs for a professional UI.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-sky-900 text-sky-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">React.js</span>
-                        <span class="bg-yellow-900 text-yellow-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
-                        <span class="bg-blue-900 text-blue-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS3</span>
-                    </div>
-                    <a href="http://anishdental.com" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium mt-auto">View Project &rarr;</a>
-                </div>
-            </div>
-
-            <h3 class="text-2xl font-semibold text-white mb-8">UI/UX Design Projects</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                <!-- Audyn -->
-                <div class="project-card bg-gray-900 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
-                    <div class="text-6xl mb-4">💄</div>
-                    <h4 class="text-xl font-bold text-white mb-2">Audyn – Makeup and Salon</h4>
-                    <p class="text-slate-400 mb-4 flex-grow">A modern and elegant UI for beauty and salon services, focusing on a premium customer experience.</p>
-                    <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=922-12&t=mnCzjvf8S4zEqrQg-1&scaling=min-zoom&content-scaling=fixed&page-id=602%3A150" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium mt-auto">View Prototype &rarr;</a>
-                </div>
-
-                <!-- Real Estate -->
-                <div class="project-card bg-gray-900 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
-                    <div class="text-6xl mb-4">🏡</div>
-                    <h4 class="text-xl font-bold text-white mb-2">Real Estate Platform</h4>
-                    <p class="text-slate-400 mb-4 flex-grow">Buy, rent, or sell properties with an easy-to-use real estate platform design.</p>
-                    <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=570-149&t=CEAoP7O2ViijFmmT-1&scaling=min-zoom&content-scaling=fixed&page-id=426%3A2" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium mt-auto">View Prototype &rarr;</a>
-                </div>
-
-                <!-- EduPath -->
-                <div class="project-card bg-gray-900 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
-                    <div class="text-6xl mb-4">📚</div>
-                    <h4 class="text-xl font-bold text-white mb-2">EduPath – Education Website</h4>
-                    <p class="text-slate-400 mb-4 flex-grow">A student-friendly learning platform with a clean, modern UI for seamless navigation.</p>
-                    <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=442-2&t=g4rQKgBsNk6ZOOSD-1&scaling=min-zoom&content-scaling=fixed&page-id=435%3A2" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium mt-auto">View Prototype &rarr;</a>
-                </div>
-
-                <!-- Food Delivery -->
-                <div class="project-card bg-gray-900 rounded-lg shadow-lg overflow-hidden p-6 flex flex-col items-center text-center">
-                    <div class="text-6xl mb-4">🍔</div>
-                    <h4 class="text-xl font-bold text-white mb-2">Food Delivery Website</h4>
-                    <p class="text-slate-400 mb-4 flex-grow">A responsive and user-friendly food ordering website with smooth interactions.</p>
-                    <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=124-584&t=YbUg8gSAReOStWSh-1&scaling=min-zoom&content-scaling=fixed&page-id=124%3A2" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:text-sky-300 font-medium mt-auto">View Prototype &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Experience -->
-        <section id="experience" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Professional Experience</h2>
-                <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
-            </div>
-            <div class="max-w-3xl mx-auto">
-                <div class="relative border-l-2 border-gray-700 pl-8 space-y-12">
-                     <!-- Trulyaim Technology -->
-                    <div class="timeline-item">
-                        <h3 class="text-xl font-bold text-sky-400">Front-End Developer & UI/UX Designer</h3>
-                        <p class="font-medium text-white">Trulyaim Technology</p>
-                        <p class="text-sm text-slate-400 mb-2">April 2025 – Present | Andhra Pradesh, India</p>
-                        <ul class="list-disc pl-5 text-slate-300 space-y-1">
-                            <li>Developed dynamic, responsive web applications using React.js, HTML5, CSS3, and Bootstrap.</li>
-                            <li>Built reusable React components with hooks for state management, enhancing modularity.</li>
-                            <li>Translated Figma wireframes into functional, pixel-perfect front-end code.</li>
-                        </ul>
-                    </div>
-                    <!-- Gayatri Earth Movers -->
-                    <div class="timeline-item">
-                        <h3 class="text-xl font-bold text-sky-400">Supervisor</h3>
-                        <p class="font-medium text-white">Gayatri Earth Movers</p>
-                        <p class="text-sm text-slate-400 mb-2">2023 – 2025 | Andhra Pradesh, India</p>
-                        <ul class="list-disc pl-5 text-slate-300 space-y-1">
-                             <li>Led operations and task delegation for a team of 10+, improving project efficiency by 15%.</li>
-                             <li>Managed financial records and resolved operational challenges to ensure seamless workflows.</li>
-                        </ul>
-                    </div>
-                     <!-- Hindustan Petroleum -->
-                    <div class="timeline-item">
-                         <h3 class="text-xl font-bold text-sky-400">Supervisor</h3>
-                         <p class="font-medium text-white">Hindustan Petroleum, Ujwala Filling Point</p>
-                         <p class="text-sm text-slate-400 mb-2">2022 – 2023 | Andhra Pradesh, India</p>
-                         <ul class="list-disc pl-5 text-slate-300 space-y-1">
-                             <li>Oversaw daily operations, ensuring compliance with safety and company standards.</li>
-                             <li>Maintained accurate transaction logs using accounting software.</li>
-                         </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Education & Certifications -->
-        <section id="education" class="py-24">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Education & Certifications</h2>
-                <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
-            </div>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                 <div class="bg-gray-900 p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold text-white mb-4">Education</h3>
-                    <div>
-                        <h4 class="text-lg font-semibold text-sky-400">Bachelor of Arts (Commerce)</h4>
-                        <p class="text-slate-300">Andhra University</p>
-                        <p class="text-sm text-slate-500">2022 - 2026</p>
-                    </div>
-                    <div class="mt-4">
-                        <h4 class="text-lg font-semibold text-sky-400">Intermediate</h4>
-                        <p class="text-slate-300">Andhra Pradesh Open School Society</p>
-                        <p class="text-sm text-slate-500">2019 - 2020</p>
-                    </div>
-                </div>
-                 <div class="bg-gray-900 p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold text-white mb-4">Certifications</h3>
-                    <div>
-                        <h4 class="text-lg font-semibold text-sky-400">UI/UX Designing & UI Development</h4>
-                        <p class="text-slate-300">ODIGOS Institution</p>
-                        <p class="text-sm text-slate-500">Issued May 2025</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Contact -->
-        <section id="contact" class="py-24 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white">Get In Touch</h2>
-            <div class="w-24 h-1 bg-sky-500 mx-auto mt-4"></div>
-            <p class="max-w-2xl mx-auto text-slate-400 text-lg mt-6 mb-8">
-                I'm currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to say hi, feel free to reach out.
-            </p>
-            <a href="mailto:manikantakambala12@gmail.com" class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-lg">
-                Say Hello
-            </a>
-            <div class="mt-8 text-slate-300">
-                <p class="mb-2"><strong>Email:</strong> manikantakambala12@gmail.com</p>
-                <p><strong>Phone:</strong> +91 9553963678</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto px-6 py-6 text-center text-slate-400">
-            <p>&copy; 2025 K. Manikanta. All Rights Reserved.</p>
+        <div class="bg-white border border-orange-100 rounded-lg shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6">
+          <h3 class="font-bold text-xl mb-3 text-gray-900">UI/UX Design</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Figma</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Miro</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Wireframing</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>User Research</li>
+          </ul>
         </div>
-    </footer>
+        <div class="bg-white border border-orange-100 rounded-lg shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6">
+          <h3 class="font-bold text-xl mb-3 text-gray-900">Tools & Methods</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Git & Version Control</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>VS Code</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Responsive Design</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Agile Methodologies</li>
+            <li><span class="inline-block w-2 h-2 rounded-full bg-[var(--orange-main)] mr-2"></span>Cross-Browser Compatibility</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Example Project Card -->
+        <div class="bg-white border border-orange-100 rounded-lg shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col">
+          <h3 class="font-bold text-xl mb-2 text-[var(--orange-main)]">Vijetha Packers and Movers</h3>
+          <p class="text-gray-700 mb-4 flex-1">Responsive website, mobile-first, modular React components, inquiry integration.</p>
+          <a href="http://vijethapackersandmovers.in" target="_blank" class="mt-auto text-[var(--orange-main)] font-semibold inline-block hover:underline">View Project →</a>
+        </div>
+        <!-- Repeat project cards as needed... -->
+      </div>
+    </section>
 
-        // Close mobile menu on link click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-        
-        // Highlight active nav link on scroll
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-        const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
+    <!-- Experience Section -->
+    <section id="experience" class="py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">Professional Experience</h2>
+      <div class="space-y-8">
+        <div class="relative bg-white border-l-4 border-[var(--orange-main)] p-6 pl-10 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-lg text-[var(--orange-main)]">Front-End Developer &amp; UI/UX Designer</h3>
+          <span class="block font-medium text-gray-700 mb-1">Trulyaim Technology</span>
+          <span class="block text-sm text-gray-400 mb-2">April 2025 – Present</span>
+          <ul class="list-disc pl-6 text-gray-600">
+            <li>Developed dynamic, responsive apps using React.js/TailwindCSS.</li>
+            <li>Converted Figma wireframes into functional code.</li>
+          </ul>
+        </div>
+        <!-- Repeat for other jobs -->
+      </div>
+    </section>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.getAttribute('id');
-                    
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                     mobileNavLinks.forEach(link => {
-                        link.classList.remove('font-bold', 'text-sky-400');
-                        if (link.getAttribute('href') === `#${id}`) {
-                            link.classList.add('font-bold', 'text-sky-400');
-                        }
-                    });
-                }
-            });
-        }, { rootMargin: '-30% 0px -70% 0px' });
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+      <p class="text-lg mb-8 text-gray-700">Currently seeking new opportunities. Questions or want to connect? Reach out below.</p>
+      <a href="mailto:manikantakambala12@gmail.com" class="bg-[var(--orange-main)] hover:brightness-110 text-white font-bold px-10 py-3 rounded-lg shadow transition">Say Hello</a>
+      <div class="mt-8 text-gray-700">
+        <p><strong>Email:</strong> manikantakambala12@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9553963678</p>
+      </div>
+    </section>
+  </main>
 
-        sections.forEach(section => {
-            observer.observe(section);
-        });
+  <footer class="bg-white border-t border-orange-200 py-5 text-center text-sm text-gray-400">
+    &copy; 2025 K. Manikanta. All Rights Reserved.
+  </footer>
 
-        // 3D Background Animation
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({
-            canvas: document.querySelector('#bg-canvas'),
-            alpha: true
-        });
-
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        
-        camera.position.z = 5;
-
-        const geometry = new THREE.IcosahedronGeometry(2.5, 0);
-        const material = new THREE.PointsMaterial({
-            size: 0.015,
-            color: 0x38bdf8
-        });
-        const sphere = new THREE.Points(geometry, material);
-        scene.add(sphere);
-
-        const particleCount = 500;
-        const particles = new THREE.BufferGeometry();
-        const posArray = new Float32Array(particleCount * 3);
-
-        for(let i=0; i < particleCount * 3; i++) {
-            posArray[i] = (Math.random() - 0.5) * 10;
-        }
-
-        particles.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-        const particleMaterial = new THREE.PointsMaterial({
-            size: 0.005,
-            color: 0xffffff
-        });
-
-        const particleMesh = new THREE.Points(particles, particleMaterial);
-        scene.add(particleMesh);
-
-
-        let mouseX = 0;
-        let mouseY = 0;
-
-        document.addEventListener('mousemove', (event) => {
-            mouseX = event.clientX;
-            mouseY = event.clientY;
-        });
-
-        const clock = new THREE.Clock();
-
-        const animate = () => {
-            const elapsedTime = clock.getElapsedTime();
-
-            sphere.rotation.y = .2 * elapsedTime;
-            sphere.rotation.x = .2 * elapsedTime;
-            
-            particleMesh.rotation.y = -0.05 * elapsedTime;
-            
-            if(mouseX > 0){
-                particleMesh.rotation.x = -mouseY * (elapsedTime * 0.00003);
-                particleMesh.rotation.y = -mouseX * (elapsedTime * 0.00003);
-            }
-
-            renderer.render(scene, camera);
-            window.requestAnimationFrame(animate);
-        };
-
-        animate();
-
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        });
-
-    </script>
+  <script>
+    // RESPONSIVE NAV for mobile
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.onclick = () => menu.classList.toggle('hidden');
+    // Optional: auto-close menu on nav click
+    Array.from(menu.getElementsByTagName('a')).forEach(a =>
+      a.onclick = () => menu.classList.add('hidden')
+    );
+  </script>
+  <!-- Optionally load FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
 
