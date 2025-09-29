@@ -7,17 +7,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --orange-main: #fd7e14;
-    }
+    :root { --orange-main: #fd7e14; }
     body { font-family: 'Inter', sans-serif; }
-    /* for section scroll nav highlight, use JS if wanted */
   </style>
 </head>
 <body class="bg-white text-gray-900">
 
   <!-- Navbar -->
-  <header class="fixed w-full top-0 left-0 bg-white/80 border-b border-orange-100 z-50 shadow-md">
+  <header class="fixed w-full top-0 left-0 bg-white/80 border-b border-orange-100 z-50 shadow-sm">
     <nav class="flex justify-between items-center max-w-6xl mx-auto px-4 py-3">
       <div class="font-extrabold text-2xl text-[var(--orange-main)] tracking-tight">KM</div>
       <div class="hidden md:flex items-center space-x-8 font-semibold">
@@ -57,8 +54,9 @@
         <a href="mailto:manikantakambala12@gmail.com" class="bg-white border border-[var(--orange-main)] text-[var(--orange-main)] font-bold px-8 py-3 rounded-lg shadow hover:bg-[var(--orange-main)] hover:text-white transition">Get in Touch</a>
       </div>
       <div class="flex justify-center gap-6">
-        <a href="https://www.linkedin.com/in/manikanta-kambala/" aria-label="LinkedIn" target="_blank" class="text-gray-400 hover:text-[var(--orange-main)] text-3xl transition"><i class="fab fa-linkedin"></i></a>
-        <!-- Add more socials as needed -->
+        <a href="https://www.linkedin.com/in/manikanta-kambala/" aria-label="LinkedIn" target="_blank" class="text-gray-400 hover:text-[var(--orange-main)] text-3xl transition">
+          <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
       </div>
     </section>
 
@@ -80,7 +78,6 @@
     <section id="skills" class="py-16">
       <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">Technical Skills</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Skill Card -->
         <div class="bg-white border border-orange-100 rounded-lg shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6">
           <h3 class="font-bold text-xl mb-3 text-gray-900">Front-End Development</h3>
           <ul class="space-y-2 text-gray-600">
@@ -116,15 +113,106 @@
 
     <!-- Projects Section -->
     <section id="projects" class="py-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Example Project Card -->
-        <div class="bg-white border border-orange-100 rounded-lg shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col">
-          <h3 class="font-bold text-xl mb-2 text-[var(--orange-main)]">Vijetha Packers and Movers</h3>
-          <p class="text-gray-700 mb-4 flex-1">Responsive website, mobile-first, modular React components, inquiry integration.</p>
-          <a href="http://vijethapackersandmovers.in" target="_blank" class="mt-auto text-[var(--orange-main)] font-semibold inline-block hover:underline">View Project →</a>
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">
+        My Work & Design Process
+      </h2>
+      <p class="text-center text-gray-700 mb-10">
+        A selection of my best development projects and UI/UX designs.
+      </p>
+      <div class="max-w-6xl mx-auto space-y-16">
+
+        <!-- Development Projects -->
+        <div>
+          <h3 class="text-2xl font-semibold text-[var(--orange-main)] mb-8">Development Projects</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white border border-orange-100 rounded-xl shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 text-[var(--orange-main)]">Vijetha Packers and Movers</h4>
+              <p class="text-gray-700 mb-3 flex-1">
+                Responsive website for mobile and desktop, modular React components, inquiry forms.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2.5 py-0.5 rounded-full">React.js</span>
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2 py-0.5 rounded-full">Bootstrap</span>
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2 py-0.5 rounded-full">HTML5</span>
+              </div>
+              <a href="http://vijethapackersandmovers.in" target="_blank" class="text-[var(--orange-main)] font-semibold mt-auto hover:underline">View Project &rarr;</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-white border border-orange-100 rounded-xl shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 text-[var(--orange-main)]">GL Sports Centrum</h4>
+              <p class="text-gray-700 mb-3 flex-1">
+                Interactive booking, responsive layouts, dynamic React navigation, real-time features.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2.5 py-0.5 rounded-full">React.js</span>
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2 py-0.5 rounded-full">Tailwind CSS</span>
+              </div>
+              <a href="http://glsportscentrum.com" target="_blank" class="text-[var(--orange-main)] font-semibold mt-auto hover:underline">View Project &rarr;</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="bg-white border border-orange-100 rounded-xl shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col">
+              <h4 class="text-xl font-bold mb-2 text-[var(--orange-main)]">Anish Dental</h4>
+              <p class="text-gray-700 mb-3 flex-1">
+                Patient-focused website, pixel-perfect Figma alignment, professional UI with React.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2.5 py-0.5 rounded-full">React.js</span>
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2 py-0.5 rounded-full">JavaScript</span>
+                <span class="bg-orange-50 text-[var(--orange-main)] text-xs font-semibold px-2 py-0.5 rounded-full">CSS3</span>
+              </div>
+              <a href="http://anishdental.com" target="_blank" class="text-[var(--orange-main)] font-semibold mt-auto hover:underline">View Project &rarr;</a>
+            </div>
+          </div>
         </div>
-        <!-- Repeat project cards as needed... -->
+
+        <!-- UI/UX Design Projects -->
+        <div>
+          <h3 class="text-2xl font-semibold text-[var(--orange-main)] mb-8">UI/UX Design Projects</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Audyn -->
+            <div class="bg-white border border-orange-100 rounded-xl shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col items-center text-center">
+              <div class="text-5xl mb-2">💄</div>
+              <h4 class="text-xl font-bold mb-2 text-[var(--orange-main)]">Audyn – Makeup and Salon</h4>
+              <p class="text-gray-700 mb-4 flex-1">
+                Modern, elegant UI for beauty/salon with premium experience focus.
+              </p>
+              <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=922-12&t=mnCzjvf8S4zEqrQg-1&scaling=min-zoom&content-scaling=fixed&page-id=602%3A150"
+                target="_blank" class="text-[var(--orange-main)] font-semibold mt-auto hover:underline">View Figma Prototype &rarr;</a>
+            </div>
+            <!-- Real Estate -->
+            <div class="bg-white border border-orange-100 rounded-xl shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col items-center text-center">
+              <div class="text-5xl mb-2">🏡</div>
+              <h4 class="text-xl font-bold mb-2 text-[var(--orange-main)]">Real Estate Platform</h4>
+              <p class="text-gray-700 mb-4 flex-1">
+                Easy buy/rent/sell, clean platform UI, enhanced user journey.
+              </p>
+              <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=570-149&t=CEAoP7O2ViijFmmT-1&scaling=min-zoom&content-scaling=fixed&page-id=426%3A2"
+                target="_blank" class="text-[var(--orange-main)] font-semibold mt-auto hover:underline">View Figma Prototype &rarr;</a>
+            </div>
+            <!-- EduPath -->
+            <div class="bg-white border border-orange-100 rounded-xl shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col items-center text-center">
+              <div class="text-5xl mb-2">📚</div>
+              <h4 class="text-xl font-bold mb-2 text-[var(--orange-main)]">EduPath – Education Website</h4>
+              <p class="text-gray-700 mb-4 flex-1">
+                Student-friendly platform, modern UI, seamless navigation.
+              </p>
+              <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=442-2&t=g4rQKgBsNk6ZOOSD-1&scaling=min-zoom&content-scaling=fixed&page-id=435%3A2"
+                target="_blank" class="text-[var(--orange-main)] font-semibold mt-auto hover:underline">View Figma Prototype &rarr;</a>
+            </div>
+            <!-- Food Delivery -->
+            <div class="bg-white border border-orange-100 rounded-xl shadow hover:shadow-lg hover:border-[var(--orange-main)] transition p-6 flex flex-col items-center text-center">
+              <div class="text-5xl mb-2">🍔</div>
+              <h4 class="text-xl font-bold mb-2 text-[var(--orange-main)]">Food Delivery Website</h4>
+              <p class="text-gray-700 mb-4 flex-1">
+                Responsive food ordering, smooth interactions, user-focused flows.
+              </p>
+              <a href="https://www.figma.com/proto/kMD2dNTMnMVqcO0eqq0GqF/Moving?node-id=124-584&t=YbUg8gSAReOStWSh-1&scaling=min-zoom&content-scaling=fixed&page-id=124%3A2"
+                target="_blank" class="text-[var(--orange-main)] font-semibold mt-auto hover:underline">View Figma Prototype &rarr;</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -135,13 +223,56 @@
         <div class="relative bg-white border-l-4 border-[var(--orange-main)] p-6 pl-10 rounded shadow hover:shadow-lg transition">
           <h3 class="font-bold text-lg text-[var(--orange-main)]">Front-End Developer &amp; UI/UX Designer</h3>
           <span class="block font-medium text-gray-700 mb-1">Trulyaim Technology</span>
-          <span class="block text-sm text-gray-400 mb-2">April 2025 – Present</span>
+          <span class="block text-sm text-gray-400 mb-2">April 2025 – Present, Andhra Pradesh, India</span>
           <ul class="list-disc pl-6 text-gray-600">
             <li>Developed dynamic, responsive apps using React.js/TailwindCSS.</li>
             <li>Converted Figma wireframes into functional code.</li>
           </ul>
         </div>
-        <!-- Repeat for other jobs -->
+        <div class="relative bg-white border-l-4 border-[var(--orange-main)] p-6 pl-10 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-lg text-[var(--orange-main)]">Supervisor</h3>
+          <span class="block font-medium text-gray-700 mb-1">Gayatri Earth Movers</span>
+          <span class="block text-sm text-gray-400 mb-2">2023 – 2025, Andhra Pradesh, India</span>
+          <ul class="list-disc pl-6 text-gray-600">
+            <li>Led team of 10+, enhanced work efficiency, managed finances & records.</li>
+          </ul>
+        </div>
+        <div class="relative bg-white border-l-4 border-[var(--orange-main)] p-6 pl-10 rounded shadow hover:shadow-lg transition">
+          <h3 class="font-bold text-lg text-[var(--orange-main)]">Supervisor</h3>
+          <span class="block font-medium text-gray-700 mb-1">Hindustan Petroleum, Ujwala Filling Point</span>
+          <span class="block text-sm text-gray-400 mb-2">2022 – 2023, Andhra Pradesh, India</span>
+          <ul class="list-disc pl-6 text-gray-600">
+            <li>Oversaw operations, ensured compliance, maintained accurate transaction logs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="py-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10">Education & Certifications</h2>
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white border border-orange-100 rounded-lg p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Education</h3>
+          <div>
+            <h4 class="text-lg font-semibold text-[var(--orange-main)]">Bachelor of Arts (Commerce)</h4>
+            <p class="text-gray-700">Andhra University</p>
+            <p class="text-sm text-gray-400">2022 - 2026</p>
+          </div>
+          <div class="mt-4">
+            <h4 class="text-lg font-semibold text-[var(--orange-main)]">Intermediate</h4>
+            <p class="text-gray-700">Andhra Pradesh Open School Society</p>
+            <p class="text-sm text-gray-400">2019 - 2020</p>
+          </div>
+        </div>
+        <div class="bg-white border border-orange-100 rounded-lg p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Certifications</h3>
+          <div>
+            <h4 class="text-lg font-semibold text-[var(--orange-main)]">UI/UX Designing &amp; UI Development</h4>
+            <p class="text-gray-700">ODIGOS Institution</p>
+            <p class="text-sm text-gray-400">Issued May 2025</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -162,17 +293,13 @@
   </footer>
 
   <script>
-    // RESPONSIVE NAV for mobile
+    // Responsive mobile nav
     const btn = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     btn.onclick = () => menu.classList.toggle('hidden');
-    // Optional: auto-close menu on nav click
     Array.from(menu.getElementsByTagName('a')).forEach(a =>
       a.onclick = () => menu.classList.add('hidden')
     );
   </script>
-  <!-- Optionally load FontAwesome for icons -->
-  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
